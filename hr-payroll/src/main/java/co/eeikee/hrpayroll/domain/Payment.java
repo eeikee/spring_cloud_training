@@ -1,12 +1,16 @@
 package co.eeikee.hrpayroll.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
-@AllArgsConstructor
-public class Payment {
-    private String name;
-    private Double dailyIncome;
-    private Integer days;
+public class Payment implements Serializable {
+    @NonNull private String name;
+    @NonNull private Double dailyIncome;
+    @NonNull private Integer days;
+
+    public Double getTotal(){
+        return dailyIncome*days;
+    }
 }

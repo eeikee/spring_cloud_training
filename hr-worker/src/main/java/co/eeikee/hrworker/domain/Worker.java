@@ -1,16 +1,12 @@
 package co.eeikee.hrworker.domain;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@RequiredArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "tb_worker")
 public class Worker implements Serializable {
